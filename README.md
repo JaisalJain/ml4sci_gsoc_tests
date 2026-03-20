@@ -126,15 +126,15 @@ L_total = L_CE + λ_κ · L_κ + λ_TV · L_TV
 
 ## Comparison: Baseline vs PINN
 
-| Metric              | Test I (Baseline) | Test VII (PINN) | Delta      |
-| ------------------- | :---------------: | :-------------: | :--------: |
-| Validation Accuracy |      93.88%       |     93.69%      | −0.19%     |
-| AUC (no)            |      0.9908       |   **0.9910**    | +0.0002    |
-| AUC (sphere)        |      0.9816       |   **0.9818**    | +0.0002    |
-| AUC (vort)          |      0.9926       |   **0.9931**    | +0.0005    |
-| Macro AUC           |      0.9883       |   **0.9886**    | +0.0003    |
-| Parameters          |       23.5M       |      25.3M      | +1.8M      |
-| Training Epochs     |        10         |       10        | —          |
+| Metric              | Test I (Baseline) | Test VII (PINN) |  Delta  |
+| ------------------- | :---------------: | :-------------: | :-----: |
+| Validation Accuracy |      93.88%       |     93.69%      | −0.19%  |
+| AUC (no)            |      0.9908       |   **0.9910**    | +0.0002 |
+| AUC (sphere)        |      0.9816       |   **0.9818**    | +0.0002 |
+| AUC (vort)          |      0.9926       |   **0.9931**    | +0.0005 |
+| Macro AUC           |      0.9883       |   **0.9886**    | +0.0003 |
+| Parameters          |       23.5M       |      25.3M      |  +1.8M  |
+| Training Epochs     |        10         |       10        |    —    |
 
 **Key takeaway:** AUC improves across all three classes. Accuracy is −0.19% — a known effect of multi-task regularisation slightly shifting the decision boundary while improving probability calibration.
 
@@ -204,7 +204,7 @@ pip install -r requirements.txt
 ### Clone repo
 
 ```bash
-git clone https://github.com/JaisalJain/ml4sci-gsoc-tests.git
+git clone https://github.com/JaisalJain/ml4sci_gsoc_tests.git
 ```
 
 ### Test I — Baseline Classification
@@ -261,30 +261,30 @@ dataset/
 
 ### Test I
 
-| Parameter     | Value                      |
-| ------------- | -------------------------- |
-| Batch size    | 128                        |
-| Epochs        | 10                         |
-| Learning rate | 3e-4                       |
-| Weight decay  | 1e-4                       |
-| Optimizer     | AdamW                      |
-| Scheduler     | CosineAnnealingLR          |
-| Grad clipping | clip_grad_norm\_(1.0)      |
+| Parameter     | Value                 |
+| ------------- | --------------------- |
+| Batch size    | 128                   |
+| Epochs        | 10                    |
+| Learning rate | 3e-4                  |
+| Weight decay  | 1e-4                  |
+| Optimizer     | AdamW                 |
+| Scheduler     | CosineAnnealingLR     |
+| Grad clipping | clip_grad_norm\_(1.0) |
 
 ### Test VII
 
-| Parameter       | Value                      |
-| --------------- | -------------------------- |
-| Batch size      | 128                        |
-| Epochs          | 10                         |
-| Learning rate   | 3e-4                       |
-| Weight decay    | 1e-4                       |
-| Optimizer       | AdamW                      |
-| Scheduler       | CosineAnnealingLR          |
-| Grad clipping   | clip_grad_norm\_(1.0)      |
-| Mixed precision | AMP (GradScaler)           |
-| λ_κ             | 0.1                        |
-| λ_TV            | 0.01                       |
+| Parameter       | Value                 |
+| --------------- | --------------------- |
+| Batch size      | 128                   |
+| Epochs          | 10                    |
+| Learning rate   | 3e-4                  |
+| Weight decay    | 1e-4                  |
+| Optimizer       | AdamW                 |
+| Scheduler       | CosineAnnealingLR     |
+| Grad clipping   | clip_grad_norm\_(1.0) |
+| Mixed precision | AMP (GradScaler)      |
+| λ_κ             | 0.1                   |
+| λ_TV            | 0.01                  |
 
 ---
 
