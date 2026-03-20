@@ -1,0 +1,18 @@
+{
+  "model": "resnet50",
+  "pretrained": true,
+  "total_parameters": 23514179,
+  "trainable_parameters": 23514179,
+  "batch_size": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "num_epochs": 10,
+  "best_epoch": 10,
+  "final_val_accuracy": 93.88,
+  "final_val_loss": 0.3317581754684448,
+  "auc_no_substructure": 0.99080444,
+  "auc_subhalo": 0.9816031999999999,
+  "auc_vortex": 0.9926207599999999,
+  "auc_micro_average": 0.9902321777777777,
+  "auc_macro_average": 0.9883427999999999
+}

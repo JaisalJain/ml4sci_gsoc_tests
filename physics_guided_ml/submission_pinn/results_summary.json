@@ -1,0 +1,23 @@
+{
+  "model": "DeepLensePINN (ResNet50 + LensEquationLayer)",
+  "total_parameters": 25323334,
+  "trainable_parameters": 25323334,
+  "batch_size": 128,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "lambda_convergence": 0.1,
+  "lambda_tv": 0.01,
+  "num_epochs": 10,
+  "training_time_min": 19.5,
+  "best_epoch": 10,
+  "val_accuracy": 93.6933,
+  "auc_no_substructure": 0.991,
+  "auc_subhalo": 0.9818,
+  "auc_vortex": 0.9931,
+  "auc_micro_average": 0.9901,
+  "auc_macro_average": 0.9886,
+  "baseline_accuracy": 93.88,
+  "baseline_auc_macro": 0.9883,
+  "accuracy_delta": -0.1867,
+  "auc_macro_delta": 0.0003
+}

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# Dataset
+dataset/
+
+# Large model files
+*.pth
+*.pt
+
+# OS files
+.DS_Store
