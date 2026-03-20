@@ -143,26 +143,21 @@ L_total = L_CE + λ_κ · L_κ + λ_TV · L_TV
 ## Repository Structure
 
 ```
-ml4sci-gsoc-tests/
-│
-├── common_test_1/                          # Test I: Baseline Classification
-│   ├── notebook/
-│   │   ├── gravitational_lensing_classification.ipynb
-│   │   ├── results/
-│   │   │   ├── confusion_matrix.png
-│   │   │   ├── roc_curves.png
-│   │   │   ├── roc_curves_individual.png
-│   │   │   ├── training_history.png
-│   │   │   └── results_summary.json
-│   │   └── submission/
-│   │       ├── model_weights.pth
-│   │       └── README.md
-│   └── README.md
-│
-├── physics_guided_ml/                      # Test VII: PINN
+ml4sci_gsoc_tests/
+├── common_test_1/
+│   ├── README.md
+│   ├── gravitational_lensing_classification.ipynb
+│   ├── results/
+│   │   ├── confusion_matrix.png
+│   │   ├── roc_curves.png
+│   │   ├── roc_curves_individual.png
+│   │   ├── training_history.png
+│   │   └── results_summary.json
+│   └── submission/
+│       └── [result files]
+├── physics_guided_ml/
+│   ├── README.md
 │   ├── gravitational_lensing_pinn.ipynb
-│   ├── checkpoints_pinn/
-│   │   └── deeplense_pinn_best.pth
 │   ├── results_pinn/
 │   │   ├── training_history.png
 │   │   ├── confusion_matrix.png
@@ -172,12 +167,11 @@ ml4sci-gsoc-tests/
 │   │   ├── source_reconstructions.png
 │   │   ├── baseline_comparison.png
 │   │   └── results_summary.json
-│   ├── submission_pinn/
-│   │   └── README.md
-│   └── README.md
-│
+│   └── submission_pinn/
+│       └── [result files]
+├── .gitignore
 ├── requirements.txt
-└── README.md                               # This file
+└── README.md
 ```
 
 ---
@@ -211,9 +205,9 @@ git clone https://github.com/JaisalJain/ml4sci_gsoc_tests.git
 
 ```bash
 jupyter lab
-# open common_test_1/notebook/gravitational_lensing_classification.ipynb
+# open common_test_1/gravitational_lensing_classification.ipynb
 # Run all cells
-# Results saved to common_test_1/notebook/results/
+# Results saved to common_test_1/results/
 ```
 
 ### Test VII — Physics-Informed Neural Network
