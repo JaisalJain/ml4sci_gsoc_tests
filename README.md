@@ -317,7 +317,14 @@ Due to GitHub file size limits, trained model weights are hosted on Google Drive
 
 ## Future Work
 
-1. Increase λ_κ (1.0–5.0) with 2-epoch warm-up for stronger physics constraint
-2. Extend to HEAL-PINN / LensPINN architectures (SIS potential ansatz)
-3. Test on real HSC/HST lensing images
-4. Regression and anomaly detection tasks
+- **Enhanced physics supervision**  
+  Incorporate ground-truth convergence or mass maps to directly supervise physical quantities (e.g., κ), improving the physical accuracy of the model beyond consistency-based losses.
+
+- **Adaptive loss weighting**  
+  Introduce dynamic balancing of loss terms (e.g., λ_κ and λ_TV) during training to better trade off between classification performance and physics constraints.
+
+- **More realistic lens models**  
+  Extend the LensEquationLayer beyond the SIS assumption to more complex and realistic profiles (e.g., elliptical or multi-component lenses) for improved generalisation.
+
+- **Uncertainty estimation for physical parameters**  
+  Add Bayesian techniques or Monte Carlo dropout to quantify uncertainty in predicted parameters such as the Einstein radius (θ_E), enabling more reliable scientific interpretation.
